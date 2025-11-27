@@ -1,4 +1,6 @@
+  console.log('termageddon');
 window.addEventListener("load", function() {
+  console.log('termageddon 2');
     const embedStr = 'policies.termageddon.com/api/embed/';
     const polKey = 'TWtkWVptUlJNMnhyU20xUlMwRTlQUT09';
     var termageddonPolicy = document.getElementById(polKey);
@@ -45,12 +47,12 @@ window.addEventListener("load", function() {
     var xhr = new XMLHttpRequest();
 
     xhr.onload = function () {
-        
+
         termageddonPolicy.innerHTML = xhr.responseText;
     }
 
     xhr.onerror = function () {
-        
+
         let reqHeader = new Headers();
         reqHeader.append('Content-Type', 'text/html');
 
